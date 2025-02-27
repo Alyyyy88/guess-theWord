@@ -6,11 +6,14 @@ const randomBtn = document.querySelector(".random-btn");
 
 const chars = document.querySelector(".word-char");
 
-const inputArr = [];
+const resetBtn = document.querySelector(".reset-btn");
+
+let inputArr = [];
 
 const createInputs = (word)=>{
 
   chars.innerHTML = "";
+  inputArr = [];
 
   for (let index = 0; index < word.length; index++) {
     const input = document.createElement("input");
@@ -19,21 +22,20 @@ const createInputs = (word)=>{
     input.classList.add("char");
     chars.append(input);
     inputArr.push(input);
-  }
+  };
 
-}
+  
+
+};
+
+const logInputValues = () => {
+  inputArr.forEach((input, index) => {
+    console.log(`Input ${index + 1}:`, input.value);
+  });
+};
 
 
 
-// const checkChar = ()=>{
-
-// }
-
-inputArr.forEach( input=>{
-  input.addEventListener("input" , ()=>{
-    console.log("input.value");
-  })
-})
 
 
 
@@ -44,6 +46,9 @@ function shuffleWord(word) {
     .sort(() => Math.random() - 0.5)
     .join(" ");
 }
+
+
+// resetBtn.addEventListener("click",logInputValues);
 
 randomBtn.addEventListener("click" ,()=>{
   const randomWord = Math.floor(Math.random() * words.length);
