@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Outfit", serif;
+  height: 100vh;
+  background:url(./resources/bg-guess-the-word.jpg) no-repeat center/cover ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  max-width: 420px;
+  background: linear-gradient(130deg, #030616, #1f2839);
+  width: 100%;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+
+.input-con{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-input{
+  background-color: #4A5567;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 4px 0px 0px #030616;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+.tries{
+  align-self: start;
+  margin-top: 12px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: auto 0px;
+}
+
+.tries-list{
+  display: flex;
+  gap: 6px;
+}
+
+.mistakes{
+  margin: auto;
+}
+
+
+.tries-items{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4A5567;
+}
+
+.tries-items.active{
+  background-color:#7429C6 ;
+}
+
+.word-char{
+  margin-top: 12px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.char{
+  /* padding: 12px; */
+  padding-left: 12px;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #4A5567;
+  border-radius: 10px;
+  outline: none;
+  background-color: #1f2839;
+  caret-color: #7429C6;
+  color: white;
+}
+
+.char:focus{
+  border: 3px solid #C951E7;
+}
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.r-btns{
+  padding: 10px 30px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  background-color: #C951E7;
+  filter: drop-shadow(0px 4px 0px #7b248a);
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
+  transition: filter ease-in-out 0.3s;
+}
+
+
+
+.r-btns:hover{
+  background-color: #7b248a;
+  filter: drop-shadow(0px 4px 0px #c951e7);
+
+}
